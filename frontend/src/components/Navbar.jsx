@@ -9,14 +9,16 @@ const Navbar = () => {
   return (
     <nav className="flex items-center justify-between px-8 py-4 bg-black shadow-md relative">
       {/* Logo (Left) */}
+      <Link to = "/home">
       <div className="flex items-center space-x-3 text-2xl font-bold tracking-tight text-[#AD88BE]">
         <img
           src="black_wisce.jpg"
           alt="WICSE Logo"
           className="w-10 h-10 object-contain rounded-full"
         />
-        <span>WICSE</span>
+        <span className="font-thin">WICSE</span>
       </div>
+      </Link>
 
       {/* Desktop Nav Links (Center) */}
       <ul className="hidden md:flex mx-auto space-x-8 text-sm font-medium">

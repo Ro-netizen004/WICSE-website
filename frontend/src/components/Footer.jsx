@@ -1,4 +1,5 @@
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { Link } from "react-router";
 
 const Footer = () => {
   return (
@@ -12,11 +13,11 @@ const Footer = () => {
 
         {/* Links */}
         <ul className="flex flex-wrap gap-6 text-sm font-medium justify-center md:justify-start">
-          <li className="hover:text-[#AD88BE] cursor-pointer">Home</li>
-          <li className="hover:text-[#AD88BE] cursor-pointer">About</li>
-          <li className="hover:text-[#AD88BE] cursor-pointer">Team</li>
-          <li className="hover:text-[#AD88BE] cursor-pointer">Events</li>
-          <li className="hover:text-[#AD88BE] cursor-pointer">Contact</li>
+          <li className="hover:text-[#AD88BE] cursor-pointer"><Link to ="/home" >Home</Link></li>
+          <li className="hover:text-[#AD88BE] cursor-pointer"><Link to ="/about" >About</Link></li>
+          <li className="hover:text-[#AD88BE] cursor-pointer"><Link to ="/team" >Team</Link></li>
+          <li className="hover:text-[#AD88BE] cursor-pointer"><Link to ="/events" >Events</Link></li>
+          <li className="hover:text-[#AD88BE] cursor-pointer"><Link to ="/contact" >Contact</Link></li>
         </ul>
 
         {/* Socials */}

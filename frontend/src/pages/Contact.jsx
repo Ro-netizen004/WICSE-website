@@ -1,9 +1,15 @@
 import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { useEffect } from "react";
 
 const Contact = () => {
+  // Scroll to top on page load
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
+    
     <>
       <Navbar />
       <section className="relative py-24 px-6 sm:px-12 md:px-20 bg-black text-white min-h-screen">

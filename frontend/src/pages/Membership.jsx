@@ -2,8 +2,13 @@ import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { FaWpforms, FaUsers, FaLaptopCode } from "react-icons/fa";
+import { useEffect } from "react";
 
 const Membership = () => {
+  // Scroll to top on page load
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
   const membershipSteps = [
     {
       id: 1,
