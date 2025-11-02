@@ -1,7 +1,7 @@
-import React from "react";
 import { motion } from "framer-motion";
 import Socials from "./Socials";
 import Features from "./Features";
+import { Link } from "react-router";
 
 const Hero = () => {
   return (
@@ -45,12 +45,12 @@ const Hero = () => {
           </p>
 
           <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-[#AD88BE] hover:bg-[#C4A0D6] text-black font-semibold py-2 sm:py-3 px-6 sm:px-10 rounded-full transition duration-300 text-sm sm:text-base">
+            <Link to = "/membership" className="bg-[#AD88BE] hover:bg-[#C4A0D6] text-black font-semibold py-2 sm:py-3 px-6 sm:px-10 rounded-full transition duration-300 text-sm sm:text-base">
               Join Us
-            </button>
-            <button className="bg-transparent border border-white text-white hover:bg-[#AD88BE] hover:text-black font-semibold py-2 sm:py-3 px-6 sm:px-10 rounded-full transition duration-300 text-sm sm:text-base">
+            </Link>
+            <Link to="/events" className="bg-transparent border border-white text-white hover:bg-[#AD88BE] hover:text-black font-semibold py-2 sm:py-3 px-6 sm:px-10 rounded-full transition duration-300 text-sm sm:text-base">
               Upcoming Events
-            </button>
+            </Link>
           </div>
           <Socials />
         </motion.div>

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useEffect } from "react";
-
+import { Link } from "react-router";
 const Contact = () => {
   // Scroll to top on page load
   useEffect(() => {
@@ -115,12 +115,11 @@ const Contact = () => {
           <p className="text-lg mb-6 font-light">
             Want to meet us in person? Come to our next event and say hello!
           </p>
-          <a
-            href="/events"
+          <Link to="/events"
             className="inline-block bg-[#AD88BE] hover:bg-[#9c6ab7] text-white font-semibold py-3 px-10 rounded-full transition-all duration-300"
           >
             View Events
-          </a>
+          </Link>
         </motion.div>
       </section>
       <Footer />

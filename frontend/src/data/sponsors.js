@@ -15,7 +15,7 @@ export const sponsors = [
   {
     name: "Honeywell",
     description: "Technology and manufacturing leader fostering inclusion.",
-    logo: "/honeywell_logo.jpg", // ✅ Local image from public folder
+    logo: "/honeywell_logo.jpg", // Local image from public folder
     website: "https://www.honeywell.com",
   },
 ];

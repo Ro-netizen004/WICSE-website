@@ -21,7 +21,7 @@ const Navbar = () => {
       </Link>
 
       {/* Desktop Nav Links (Center) */}
-      <ul className="hidden md:flex mx-auto space-x-8 text-sm font-medium">
+      <div className="hidden md:flex mx-auto space-x-8 text-sm font-medium">
         {navItems.map((item, index) => (
           <Link
             key={index}
@@ -31,7 +31,7 @@ const Navbar = () => {
             {item}
           </Link>
         ))}
-      </ul>
+      </div>
 
       {/* Join Us Button (Right - Desktop) */}
       <div className="hidden md:flex">

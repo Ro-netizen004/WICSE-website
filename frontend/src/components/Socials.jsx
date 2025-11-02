@@ -1,6 +1,7 @@
-import { FaInstagram, FaLinkedin, FaTwitter} from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaFacebook} from "react-icons/fa";
 
 const Socials = () => {
+  
   return (
     <div className="flex justify-center space-x-6 mt-8">
       <a
@@ -20,12 +21,12 @@ const Socials = () => {
         <FaLinkedin />
       </a>
       <a
-        href="https://twitter.com"
+        href="https://www.facebook.com/groups/wicseusf/"
         target="_blank"
         rel="noopener noreferrer"
         className="text-[#AD88BE] hover:text-[#956CA9] transition-colors text-2xl"
       >
-        <FaTwitter />
+        <FaFacebook />
       </a>
     </div>
   );
