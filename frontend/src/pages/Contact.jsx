@@ -44,7 +44,7 @@ const Contact = () => {
             </p>
             <ul className="text-gray-300 space-y-3">
               <li>
-                <strong className="text-[#AD88BE]">Email:</strong> info@wicse.usf.edu
+                <strong className="text-[#AD88BE]">Email:</strong> wicse.usfofficers@gmail.com
               </li>
               <li>
                 <strong className="text-[#AD88BE]">Phone:</strong> +1 (555) 123-4567

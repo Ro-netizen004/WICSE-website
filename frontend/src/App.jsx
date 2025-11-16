@@ -4,7 +4,7 @@ import About from "./pages/About"
 import Team from "./pages/Team"
 import Membership from "./pages/Membership"
 import Events from "./pages/Events"
-import Sponsorship from "./pages/Sponsorship"
+import Partnership from "./pages/Partnership"
 import Contact from "./pages/Contact"
 
 const App = () => {
@@ -17,7 +17,7 @@ const App = () => {
         <Route path="/team" element={<Team />} />
         <Route path="/membership" element={<Membership />} />
         <Route path="/events" element={<Events />} />
-        <Route path="/sponsorship" element={<Sponsorship />} />
+        <Route path="/partners" element={<Partnership />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </div>

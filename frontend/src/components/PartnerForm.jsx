@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const SponsorForm = () => {
+const PartnerForm = () => {
   return (
     <section className="py-20 px-6 sm:px-12 md:px-20 bg-white text-black">
       <motion.div
@@ -12,10 +12,11 @@ const SponsorForm = () => {
         {/* Header */}
         <div className="text-center mb-10">
           <h2 className="text-4xl font-thin text-[#AD88BE] mb-2">
-            Become a Sponsor
+            Partner With Us
           </h2>
           <p className="text-gray-600 font-light">
-            Partner with WiCSE@USF to support diversity in technology.
+            Collaborate with WiCSE@USF to support and uplift women in 
+            computing and engineering.
           </p>
           <div className="mt-4 w-20 h-1 bg-[#AD88BE] mx-auto rounded-full"></div>
         </div>
@@ -29,11 +30,11 @@ const SponsorForm = () => {
         >
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
-              Company Name
+              Organization Name
             </label>
             <input
               type="text"
-              placeholder="Enter your company name"
+              placeholder="Enter your organization name"
               className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#AD88BE]"
             />
           </div>
@@ -87,4 +88,4 @@ const SponsorForm = () => {
   );
 };
 
-export default SponsorForm;
+export default PartnerForm;

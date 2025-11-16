@@ -30,7 +30,7 @@ const Hero = () => {
           transition={{ duration: 1.2, ease: "easeOut" }}
         >
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl text-[#AD88BE] leading-snug font-thin">
-            WICSE <span className="text-white">@ USF</span>
+            WiCSE <span className="text-white">@ USF</span>
           </h1>
           <h3 className="text-base sm:text-lg md:text-xl lg:text-xl font-semibold mt-2 text-gray-200">
             Women in Computer Science and Engineering

@@ -1,4 +1,4 @@
-export const sponsors = [
+export const partners = [
   {
     name: "ArtHrex",
     description: "Leading medical device company supporting women in tech.",

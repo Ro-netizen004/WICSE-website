@@ -89,7 +89,7 @@ const Membership = () => {
             Ready to be part of our community? Join WiCSE today!
           </p>
           <a
-            href="#join-form"
+            href="https://bullsconnect.usf.edu/WICSE/club_signup"
             className="inline-block bg-[#AD88BE] hover:bg-[#9c6ab7] text-white font-semibold py-3 px-10 rounded-full transition-all duration-300"
           >
             Join Now

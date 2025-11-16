@@ -6,13 +6,15 @@ import { useEffect } from "react";
 
 const About = () => {
   // Scroll to top on page load
-    useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Navbar />
       <section className="min-h-screen bg-black text-gray-200 px-6 sm:px-12 md:px-24 py-20">
+
         {/* Header */}
         <motion.div
           className="max-w-4xl mx-auto text-center"
@@ -20,7 +22,7 @@ const About = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-thin mb-6 text-white">
+          <h1 className="text-5xl sm:text-7xl md:text-6xl font-thin mb-6 text-white">
             About <span className="text-[#AD88BE]">WiCSE</span>
           </h1>
           <p className="text-lg font-thin text-gray-300 leading-relaxed">
@@ -65,28 +67,30 @@ const About = () => {
           </motion.div>
         </div>
 
-        {/* Sponsors Section */}
+        {/* Partners Section */}
         <motion.div
           className="max-w-4xl mx-auto mt-24 text-center"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2 }}
         >
-          <h2 className="text-3xl font-thin text-[#AD88BE] mb-4">Our Sponsors</h2>
+          <h2 className="text-3xl font-thin text-[#AD88BE] mb-4">Our Partners</h2>
           <p className="text-gray-300 leading-relaxed max-w-2xl mx-auto">
-            We’re deeply grateful to our sponsors for their generous support in helping
-            us empower and inspire the next generation of women in computing and engineering.
+            We’re grateful to our partners for collaborating with us to support,
+            uplift, and empower women in computing and engineering through events,
+            mentorship, and community engagement.
           </p>
           <div className="mt-6 w-16 h-1 bg-[#AD88BE] mx-auto rounded-full"></div>
 
-          {/* Sponsors Page Button */}
+          {/* Partners Page Button */}
           <Link
-            to="/sponsorship"
+            to="/partners"
             className="inline-block mt-10 bg-[#AD88BE] hover:bg-[#9c6ab7] text-white font-semibold py-3 px-10 rounded-full transition-all duration-300"
           >
-            Meet Our Sponsors
+            Meet Our Partners
           </Link>
         </motion.div>
+
       </section>
       <Footer />
     </>
@@ -94,6 +98,4 @@ const About = () => {
 };
 
 export default About;
-
-
 

@@ -4,7 +4,7 @@ import { Link } from "react-router";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const navItems = ["Home", "About", "Team", "Membership", "Events", "Sponsorship", "Contact"];
+  const navItems = ["Home", "About", "Team", "Membership", "Events", "Partners", "Contact"];
 
   return (
     <nav className="flex items-center justify-between px-8 py-4 bg-black shadow-md relative">
