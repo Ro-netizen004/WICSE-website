@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useEffect } from "react";
 import { Link } from "react-router";
+import { FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 const Contact = () => {
   // Scroll to top on page load
   useEffect(() => {
@@ -43,14 +44,14 @@ const Contact = () => {
               Whether you’re looking to learn more about our events, join a program, or simply connect, reach out anytime — we’re here to help.
             </p>
             <ul className="text-gray-300 space-y-3">
-              <li>
-                <strong className="text-[#AD88BE]">Email:</strong> wicse.usfofficers@gmail.com
+              <li className="flex items-center gap-3">
+                <FaEnvelope className="text-white w-5 h-5" />
+                <span>wicse.usfofficers@gmail.com</span>
               </li>
-              <li>
-                <strong className="text-[#AD88BE]">Phone:</strong> +1 (555) 123-4567
-              </li>
-              <li>
-                <strong className="text-[#AD88BE]">Address:</strong> University of South Florida, Tampa, FL
+
+              <li className="flex items-center gap-3">
+                <FaMapMarkerAlt className="text-white w-5 h-5" />
+                <span>Bellini College of Artificial Intelligence, Cybersecurity and Computing, University of South Florida, Tampa, FL 33620</span>
               </li>
             </ul>
           </motion.div>

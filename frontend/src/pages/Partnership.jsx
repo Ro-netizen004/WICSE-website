@@ -33,6 +33,12 @@ const Partnership = () => {
             women in computing and engineering. Through collaboration, we host workshops, 
             community events, and programs that inspire the next generation of female 
             technologists and leaders.
+
+             
+            We collaborate with organizations in a variety of ways; from guest speaking and 
+            technical workshops to recruiting events and long-term sponsorships. 
+            Organizations interested in sponsoring WiCSE expand our programs, increase access to career opportunities,
+             and support women pursuing careers in computing and engineering. 
           </p>
           <div className="mt-4 w-24 h-1 bg-[#AD88BE] mx-auto rounded-full"></div>
         </motion.div>

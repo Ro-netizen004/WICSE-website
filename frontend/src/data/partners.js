@@ -9,7 +9,7 @@ export const partners = [
   {
     name: "JP Morgan Chase",
     description: "Global financial services firm empowering diverse talent.",
-    logo: "https://cdn.freebiesupply.com/images/large/2x/chase-logo-white.png",
+    logo: "Chase_logo.png",
     website: "https://www.jpmorganchase.com/",
   },
   {

@@ -15,7 +15,7 @@ const Membership = () => {
       icon: <FaWpforms />,
       title: "Step 1",
       description:
-        "Fill out our membership form to get started and let us know your interests in CS and Engineering.",
+        "Become a member on BullsConnect and follow us on Instagram to stay connected with WiCSE updates and opportunities. ",
       delay: 0.1,
     },
     {
@@ -23,7 +23,7 @@ const Membership = () => {
       icon: <FaUsers />,
       title: "Step 2",
       description:
-        "Attend an event to meet the community and learn more about our workshops, hackathons, and networking opportunities.",
+        "Attend events to connect with the community, explore workshops, network with professionals, and discover career and leadership opportunities. ",
       delay: 0.3,
     },
     {
@@ -31,7 +31,7 @@ const Membership = () => {
       icon: <FaLaptopCode />,
       title: "Step 3",
       description:
-        "Get involved in workshops, programs, and initiatives to enhance your skills and make meaningful contributions.",
+        "Participate in programs, initiatives, or leadership roles to build skills and make an impact.",
       delay: 0.5,
     },
   ];

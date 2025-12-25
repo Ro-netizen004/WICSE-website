@@ -12,11 +12,10 @@ const PartnerForm = () => {
         {/* Header */}
         <div className="text-center mb-10">
           <h2 className="text-4xl font-thin text-[#AD88BE] mb-2">
-            Partner With Us
+            Interested in partnering or sponsoring WiCSE@USF? 
           </h2>
           <p className="text-gray-600 font-light">
-            Collaborate with WiCSE@USF to support and uplift women in 
-            computing and engineering.
+            Complete the form below and our team will follow up. 
           </p>
           <div className="mt-4 w-20 h-1 bg-[#AD88BE] mx-auto rounded-full"></div>
         </div>
