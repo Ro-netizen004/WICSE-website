@@ -1,21 +1,30 @@
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const recentEvents = [
+  { src: "/events/Halloween_Social.jpg", alt: "Halloween Social" },
+  { src: "/events/E-Council Student Org Fair 1.jpg", alt: "E-Council Student Org Fair 1" },
+  { src: "/events/E-Council Student Org Fair 2.jpg", alt: "E-Council Student Org Fair 2" },
+  { src: "/events/JPMC.jpg", alt: "JPMC Session" },
   { src: "/events/JPMC-info-session.JPG", alt: "JPMC Info Session" },
   { src: "/events/Arthrex-info-session.jpg", alt: "Arthrex Info Session" },
-  { src: "https://wicse.cse.usf.edu/images/event2.jpg", alt: "Event 3" },
-  { src: "/events/event4.jpg", alt: "Event 4" },
+  { src: "/events/Welcome_Back.jpg", alt: "Welcome Back WiCSE" },
+  { src: "/events/Welcome_Back-2.jpg", alt: "Welcome Back WiCSE" },
 ];
 
 const RecentEvents = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 900,
     slidesToShow: 3,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000, // 3 seconds
+    pauseOnHover: true,
+    pauseOnFocus: true,
+
     responsive: [
       {
         breakpoint: 1024,
@@ -55,3 +64,4 @@ const RecentEvents = () => {
 };
 
 export default RecentEvents;
+
