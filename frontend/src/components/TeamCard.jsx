@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 
+
 const TeamCard = ({ name, role, image, link, delay = 0 }) => {
   return (
     <motion.div
@@ -26,6 +27,7 @@ const TeamCard = ({ name, role, image, link, delay = 0 }) => {
             rel="noopener noreferrer"
             className="mt-4 text-base md:text-lg text-[#AD88BE] hover:underline"
           >
+          
             Learn More
           </a>
         )}
