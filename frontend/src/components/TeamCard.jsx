@@ -1,29 +1,42 @@
 import { motion } from "framer-motion";
 
-const TeamCard = ({ name, role, image, delay = 0 }) => {
+const TeamCard = ({ name, role, image, link, delay = 0 }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay }}
-      className="w-full max-w-md p-4 rounded-2xl flex items-center gap-4 bg-white border" // removed shadow, added border
+      className="bg-white rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 max-w-sm md:max-w-md"
     >
       {/* Image */}
       <img
         src={image}
         alt={name}
-        className="w-24 h-24 rounded-full object-cover flex-shrink-0"
+        className="w-40 h-48 md:w-48 md:h-48 object-contain rounded-xl flex-shrink-0"
       />
 
       {/* Text */}
-      <div className="flex flex-col justify-center">
-        <h3 className="text-xl font-light text-[#AD88BE]">{name}</h3>
-        <p className="mt-1 font-extralight text-gray-700">{role}</p>
+      <div className="flex flex-col justify-center text-center md:text-left">
+        <h3 className="text-2xl md:text-3xl font-light text-[#AD88BE]">{name}</h3>
+        <p className="mt-3 text-gray-700 font-extralight text-lg md:text-xl">{role}</p>
+        {link && (
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 text-base md:text-lg text-[#AD88BE] hover:underline"
+          >
+            Learn More
+          </a>
+        )}
       </div>
     </motion.div>
   );
 };
 
 export default TeamCard;
+
+
+
 
 
