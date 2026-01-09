@@ -22,14 +22,14 @@ export const teams = {
     {
       name: "Gabriela Feliciano",
       role: "Vice-President (Internal)",
-      image: placeholderImage,
-      link: "https://www.usf.edu/ai-cybersecurity-computing/people/faculty/jing-wang-2.aspx"
+      image: "/teams/gabriela.png",
+      link: "https://www.linkedin.com/in/felicianog1/"
     },
     {
       name: "Luiza Ferauche",
       role: "Vice-President (External)",
-      image: placeholderImage,
-      link: "https://www.usf.edu/ai-cybersecurity-computing/people/faculty/jing-wang-2.aspx"
+      image: "/teams/Luiza.png",
+      link: "https://www.linkedin.com/in/luiza-ferauche-914218236/?originalSubdomain=br"
     },
   ],
 
@@ -49,4 +49,9 @@ export const teams = {
     { name: "Esperanza Christian", role: "Community Outreach Director", image: "/teams/esperanza.png", link: "https://www.linkedin.com/in/esperanza-christian-24393a2b5/" },
     { name: "Jaydah Barnett", role: "Professional Development Director", image: "/teams/jaydah.png", link: "https://www.linkedin.com/in/jaydah-barnett-148949380/" },
   ],
+
+  "Event Logistics":[
+    {name: "Sarrat"},
+    {name: "Dhruvi"}
+  ]
 };

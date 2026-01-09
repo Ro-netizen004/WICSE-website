@@ -66,25 +66,25 @@ const EmptyState = () => (
 );
 
 const EventCard = ({ event }) => (
-  <div className="border border-white p-6 sm:p-8 rounded-lg backdrop-blur-sm bg-black/30 transition hover:scale-105 hover:bg-black/50">
+  <div className="p-6 sm:p-8 rounded-lg bg-white border border-black">
     <h2 className="text-2xl font-semibold mb-2">{event.title}</h2>
 
-    <p className="text-gray-300 text-sm mb-1">
-      <span className="font-semibold text-white">Date: </span>
+    <p className="text-gray-900 text-sm mb-1">
+      <span className="font-semibold text-black">Date: </span>
       {event.date}
     </p>
 
-    <p className="text-gray-300 text-sm mb-1">
-      <span className="font-semibold text-white">Time: </span>
+    <p className="text-gray-900 text-sm mb-1">
+      <span className="font-semibold text-black">Time: </span>
       {event.time}
     </p>
 
-    <p className="text-gray-300 text-sm mb-4">
-      <span className="font-semibold text-white">Location: </span>
+    <p className="text-gray-900 text-sm mb-4">
+      <span className="font-semibold text-black">Location: </span>
       {event.location}
     </p>
 
-    <p className="text-gray-300 mb-6">{event.description}</p>
+    <p className="text-gray-900 mb-6">{event.description}</p>
 
     <a
       href={event.link}
