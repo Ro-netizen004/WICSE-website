@@ -37,6 +37,8 @@ const chunkArray = (arr, size) => {
 const TeamSection = ({ category, members }) => {
   if (!members || members.length === 0) return null;
 
+  const isEventLogistics = category === "Event Logistics";
+
   // Separate President, VPs, and rest
   const president = members[0] ? [members[0]] : [];
   const vps = members.length > 1 ? members.slice(1, 3) : [];
@@ -53,14 +55,33 @@ const TeamSection = ({ category, members }) => {
     <div className="space-y-6 mb-12 text-center">
       <div className="text-2xl font-thin text-black mb-6">{category}</div>
 
+      {/* If Event Logistics, display all members side by side */}
+      {isEventLogistics && (
+        <div className={getGridClass(members, members.length)}>
+          {members.map((person, idx) => (
+            <TeamCard
+              key={idx}
+              name={person.name}
+              role={person.role}
+              major={person.major} // display major
+              image={person.image}
+              link={person.link}
+              delay={idx * 0.05}
+              textColor="black"
+            />
+          ))}
+        </div>
+      )}
+
       {/* President row */}
-      {president.length > 0 && (
+      {!isEventLogistics && president.length > 0 && (
         <div className={getGridClass(president)}>
           {president.map((person, idx) => (
             <TeamCard
               key={idx}
               name={person.name}
               role={person.role}
+              major={person.major} // display major
               image={person.image}
               link={person.link}
               delay={idx * 0.05}
@@ -71,13 +92,14 @@ const TeamSection = ({ category, members }) => {
       )}
 
       {/* VPs row */}
-      {vps.length > 0 && (
+      {!isEventLogistics && vps.length > 0 && (
         <div className={getGridClass(vps, 2)}>
           {vps.map((person, idx) => (
             <TeamCard
               key={idx}
               name={person.name}
               role={person.role}
+              major={person.major} // display major
               image={person.image}
               link={person.link}
               delay={idx * 0.05}
@@ -88,21 +110,23 @@ const TeamSection = ({ category, members }) => {
       )}
 
       {/* Rest of team */}
-      {restChunks.map((chunk, idx) => (
-        <div key={idx} className={getGridClass(chunk, 2)}>
-          {chunk.map((person, i) => (
-            <TeamCard
-              key={i}
-              name={person.name}
-              role={person.role}
-              image={person.image}
-              link={person.link}
-              delay={i * 0.05}
-              textColor="black"
-            />
-          ))}
-        </div>
-      ))}
+      {!isEventLogistics &&
+        restChunks.map((chunk, idx) => (
+          <div key={idx} className={getGridClass(chunk, 2)}>
+            {chunk.map((person, i) => (
+              <TeamCard
+                key={i}
+                name={person.name}
+                role={person.role}
+                major={person.major} // display major
+                image={person.image}
+                link={person.link}
+                delay={i * 0.05}
+                textColor="black"
+              />
+            ))}
+          </div>
+        ))}
     </div>
   );
 };
@@ -145,5 +169,6 @@ const Team = () => {
 };
 
 export default Team;
+
 
 

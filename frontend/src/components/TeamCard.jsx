@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 
-
-const TeamCard = ({ name, role, image, link, delay = 0 }) => {
+const TeamCard = ({ name, role, major, image, link, delay = 0 }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
@@ -20,6 +19,7 @@ const TeamCard = ({ name, role, image, link, delay = 0 }) => {
       <div className="flex flex-col justify-center text-center md:text-left">
         <h3 className="text-2xl md:text-3xl font-light text-[#AD88BE]">{name}</h3>
         <p className="mt-3 text-gray-700 font-extralight text-lg md:text-xl">{role}</p>
+        {major && <p className="text-gray-500 font-light text-sm md:text-base italic mt-1">{major}</p>} {/* Added major */}
         {link && (
           <a
             href={link}
@@ -27,7 +27,6 @@ const TeamCard = ({ name, role, image, link, delay = 0 }) => {
             rel="noopener noreferrer"
             className="mt-4 text-base md:text-lg text-[#AD88BE] hover:underline"
           >
-          
             Learn More
           </a>
         )}
@@ -37,8 +36,5 @@ const TeamCard = ({ name, role, image, link, delay = 0 }) => {
 };
 
 export default TeamCard;
-
-
-
 
 
