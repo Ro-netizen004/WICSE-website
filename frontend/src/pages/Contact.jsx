@@ -1,16 +1,48 @@
 import { motion } from "framer-motion";
+import { useRef, useState, useEffect } from "react";
+import emailjs from "@emailjs/browser";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { useEffect } from "react";
 import { Link } from "react-router";
 import { FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+
 const Contact = () => {
+  const form = useRef();
+  const [sending, setSending] = useState(false);
+  const [statusMessage, setStatusMessage] = useState("");
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setSending(true);
+    setStatusMessage("");
+
+    emailjs
+      .sendForm(
+        "service_q3ovabd",
+        "template_pnn50yf",
+        form.current,
+        "Gc_FL3kCWkz1u7f72"
+      )
+      .then(
+        () => {
+          setStatusMessage("Message sent successfully!");
+          form.current.reset();
+          setSending(false);
+        },
+        (error) => {
+          console.error(error);
+          setStatusMessage(" Oops! Something went wrong. Please try again.");
+          setSending(false);
+        }
+      );
+  };
+
   // Scroll to top on page load
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
-    
     <>
       <Navbar />
       <section className="relative py-24 px-6 sm:px-12 md:px-20 bg-black text-white min-h-screen">
@@ -25,7 +57,8 @@ const Contact = () => {
             Contact <span className="text-[#AD88BE]">Us</span>
           </h1>
           <p className="text-lg font-thin max-w-2xl mx-auto">
-            Have questions, ideas, or want to collaborate? We’d love to connect with you and help you get involved in WiCSE.
+            Have questions, ideas, or want to collaborate? We’d love to connect
+            with you and help you get involved in WiCSE.
           </p>
           <div className="mt-6 w-24 h-1 bg-[#AD88BE] mx-auto rounded-full"></div>
         </motion.div>
@@ -39,31 +72,41 @@ const Contact = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-2xl font-thin text-[#AD88BE] mb-6">Get in Touch</h2>
+            <h2 className="text-2xl font-thin text-[#AD88BE] mb-6">
+              Get in Touch
+            </h2>
             <p className="text-gray-300 mb-6">
-              Whether you’re looking to learn more about our events, join a program, or simply connect, reach out anytime — we’re here to help.
+              Whether you’re looking to learn more about our events, join a
+              program, or simply connect, reach out anytime — we’re here to help.
             </p>
             <ul className="text-gray-300 space-y-3">
               <li className="flex items-center gap-3">
                 <FaEnvelope className="text-white w-5 h-5" />
                 <span>wicse.usfofficers@gmail.com</span>
               </li>
-
               <li className="flex items-center gap-3">
                 <FaMapMarkerAlt className="text-white w-5 h-5" />
-                <span>Bellini College of Artificial Intelligence, Cybersecurity and Computing, University of South Florida, Tampa, FL 33620</span>
+                <span>
+                  Bellini College of Artificial Intelligence, Cybersecurity and
+                  Computing, University of South Florida, Tampa, FL 33620
+                </span>
               </li>
             </ul>
           </motion.div>
 
           {/* Contact Form */}
           <motion.form
+            ref={form}
+            onSubmit={sendEmail}
             className="bg-[#0b0b0b] p-8 rounded-2xl shadow-lg border border-[#AD88BE]/40"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-2xl font-thin text-[#AD88BE] mb-6">Send a Message</h2>
+            <h2 className="text-2xl font-thin text-[#AD88BE] mb-6">
+              Send a Message
+            </h2>
+
             <div className="mb-4">
               <label className="block text-gray-300 mb-2" htmlFor="name">
                 Name
@@ -71,10 +114,13 @@ const Contact = () => {
               <input
                 type="text"
                 id="name"
+                name="name"
                 className="w-full p-3 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-[#AD88BE]"
                 placeholder="Your Name"
+                required
               />
             </div>
+
             <div className="mb-4">
               <label className="block text-gray-300 mb-2" htmlFor="email">
                 Email
@@ -82,27 +128,48 @@ const Contact = () => {
               <input
                 type="email"
                 id="email"
+                name="email"
                 className="w-full p-3 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-[#AD88BE]"
                 placeholder="your.email@example.com"
+                required
               />
             </div>
+
+            <input
+              type="hidden"
+              name="time"
+              value={new Date().toLocaleString()}
+            />
+
             <div className="mb-6">
               <label className="block text-gray-300 mb-2" htmlFor="message">
                 Message
               </label>
               <textarea
                 id="message"
+                name="message"
                 rows="5"
                 className="w-full p-3 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-[#AD88BE]"
                 placeholder="Type your message here..."
+                required
               ></textarea>
             </div>
+
             <button
               type="submit"
-              className="w-full bg-[#AD88BE] hover:bg-[#9c6ab7] text-white font-semibold py-3 px-6 rounded-full transition-all duration-300"
+              disabled={sending}
+              className={`w-full ${
+                sending ? "bg-gray-500 cursor-not-allowed" : "bg-[#AD88BE] hover:bg-[#9c6ab7]"
+              } text-white font-semibold py-3 px-6 rounded-full transition-all duration-300`}
             >
-              Send Message
+              {sending ? "Sending..." : "Send Message"}
             </button>
+
+            {statusMessage && (
+              <p className="mt-4 text-center text-sm">
+                {statusMessage}
+              </p>
+            )}
           </motion.form>
         </div>
 
@@ -116,7 +183,8 @@ const Contact = () => {
           <p className="text-lg mb-6 font-light">
             Want to meet us in person? Come to our next event and say hello!
           </p>
-          <Link to="/events"
+          <Link
+            to="/events"
             className="inline-block bg-[#AD88BE] hover:bg-[#9c6ab7] text-white font-semibold py-3 px-10 rounded-full transition-all duration-300"
           >
             View Events
@@ -129,4 +197,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
