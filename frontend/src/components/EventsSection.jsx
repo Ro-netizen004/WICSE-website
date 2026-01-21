@@ -1,33 +1,39 @@
 import { useEffect, useState } from "react";
+import { REGISTRATION_LINKS } from "../data/registration_links";
 
 const calendarId = import.meta.env.VITE_GOOGLE_CALENDAR_ID;
 const apiKey = import.meta.env.VITE_GOOGLE_API_KEY;
 
 /* ---------- helpers ---------- */
 
-const formatEvent = (event) => ({
-  id: event.id,
-  title: event.summary || "Untitled Event",
-  date: new Date(
-    event.start.dateTime || event.start.date
-  ).toLocaleDateString("en-US", {
-    month: "short",
-    day: "numeric",
-    year: "numeric",
-  }),
-  time: event.start.dateTime
-    ? `${new Date(event.start.dateTime).toLocaleTimeString([], {
-        hour: "2-digit",
-        minute: "2-digit",
-      })} - ${new Date(event.end.dateTime).toLocaleTimeString([], {
-        hour: "2-digit",
-        minute: "2-digit",
-      })}`
-    : "All Day",
-  location: event.location || "TBD",
-  description: event.description || "No description available.",
-  link: event.htmlLink || "#",
-});
+const formatEvent = (event) => {
+  const startDate = new Date(event.start.dateTime || event.start.date);
+
+  return {
+    id: event.id,
+    title: event.summary,
+    startDate,
+    date: startDate.toLocaleDateString("en-US", {
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+    }),
+    time: event.start.dateTime
+      ? `${new Date(event.start.dateTime).toLocaleTimeString([], {
+          hour: "2-digit",
+          minute: "2-digit",
+        })} - ${new Date(event.end.dateTime).toLocaleTimeString([], {
+          hour: "2-digit",
+          minute: "2-digit",
+        })}`
+      : null,
+    location: event.location,
+    description: event.description,
+    link:
+      REGISTRATION_LINKS[event.id] ||
+      null,
+  };
+};
 
 const fetchCalendarEvents = async () => {
   const res = await fetch(
@@ -37,7 +43,18 @@ const fetchCalendarEvents = async () => {
   if (!res.ok) throw new Error("Failed to fetch");
 
   const data = await res.json();
-  return (data.items || []).map(formatEvent);
+
+  const now = new Date();
+  const currentMonth = now.getMonth();
+  const currentYear = now.getFullYear();
+
+  return (data.items || [])
+    .map(formatEvent)
+    .filter(
+      (event) =>
+        event.startDate.getMonth() === currentMonth &&
+        event.startDate.getFullYear() === currentYear
+    );
 };
 
 /* ---------- UI states ---------- */
@@ -60,40 +77,54 @@ const EmptyState = () => (
       className="w-32 h-32 sm:w-48 sm:h-48 object-contain"
     />
     <p className="text-center text-gray-400 text-lg">
-      No upcoming events right now — stay tuned for exciting WiCSE events soon
+      No events scheduled for this month — stay tuned!
     </p>
   </div>
 );
 
+/* ---------- event card ---------- */
+
 const EventCard = ({ event }) => (
   <div className="p-6 sm:p-8 rounded-lg bg-white border border-black">
-    <h2 className="text-2xl font-semibold mb-2">{event.title}</h2>
+    {event.title && (
+      <h2 className="text-2xl font-semibold mb-2">{event.title}</h2>
+    )}
 
-    <p className="text-gray-900 text-sm mb-1">
-      <span className="font-semibold text-black">Date: </span>
-      {event.date}
-    </p>
+    {event.date && (
+      <p className="text-gray-900 text-sm mb-1">
+        <span className="font-semibold">Date: </span>
+        {event.date}
+      </p>
+    )}
 
-    <p className="text-gray-900 text-sm mb-1">
-      <span className="font-semibold text-black">Time: </span>
-      {event.time}
-    </p>
+    {event.time && (
+      <p className="text-gray-900 text-sm mb-1">
+        <span className="font-semibold">Time: </span>
+        {event.time}
+      </p>
+    )}
 
-    <p className="text-gray-900 text-sm mb-4">
-      <span className="font-semibold text-black">Location: </span>
-      {event.location}
-    </p>
+    {event.location && (
+      <p className="text-gray-900 text-sm mb-4">
+        <span className="font-semibold">Location: </span>
+        {event.location}
+      </p>
+    )}
 
-    <p className="text-gray-900 mb-6">{event.description}</p>
+    {event.description && (
+      <p className="text-gray-900 mb-6">{event.description}</p>
+    )}
 
-    <a
-      href={event.link}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-block bg-[#AD88BE] hover:bg-[#C4A0D6] text-black font-semibold py-2 px-4 rounded transition"
-    >
-      Register
-    </a>
+    {event.link && (
+      <a
+        href={event.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block bg-[#AD88BE] hover:bg-[#C4A0D6] text-black font-semibold py-2 px-4 rounded transition"
+      >
+        Register
+      </a>
+    )}
   </div>
 );
 

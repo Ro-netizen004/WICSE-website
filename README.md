@@ -76,6 +76,11 @@ src/
 
 ---
 
+## Footages
+All footages are specified to be free to use.
+
+Home Page Coding footage: https://www.pexels.com/video/close-up-of-computer-screen-code-display-29458457/
+
 ## 👩‍💻 Author
 
 **Rodela Ghosh**

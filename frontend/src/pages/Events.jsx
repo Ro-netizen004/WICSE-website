@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { REGISTRATION_LINKS } from "../data/registration_links";
 
 const calendarId = import.meta.env.VITE_GOOGLE_CALENDAR_ID;
 const apiKey = import.meta.env.VITE_GOOGLE_API_KEY;
 
 /* -------------------- helpers -------------------- */
+/* -------------------- manual overrides -------------------- */
+
 
 const formatEvent = (event) => ({
   id: event.id,
@@ -28,7 +31,7 @@ const formatEvent = (event) => ({
     : "All Day",
   location: event.location || "TBD",
   description: event.description || "No description available.",
-  link: event.htmlLink || "#",
+  link: REGISTRATION_LINKS[event.id] || null,
 });
 
 const fetchCalendarEvents = async () => {
@@ -88,14 +91,16 @@ const EventCard = ({ event }) => (
 
     <p className="text-gray-300 mb-6">{event.description}</p>
 
-    <a
-      href={event.link}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-block bg-[#AD88BE] hover:bg-[#C4A0D6] text-black font-semibold py-2 px-4 rounded transition"
-    >
-      Register
-    </a>
+    {event.link && (
+      <a
+        href={event.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block bg-[#AD88BE] hover:bg-[#C4A0D6] text-black font-semibold py-2 px-4 rounded transition"
+      >
+        Register
+      </a>
+    )}
   </div>
 );
 

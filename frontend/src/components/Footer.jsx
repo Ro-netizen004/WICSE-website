@@ -36,6 +36,7 @@ const Footer = () => {
       <div className="mt-8 text-center text-gray-400 text-sm">
         &copy; {new Date().getFullYear()} WICSE @ USF. All rights reserved.
       </div>
+       <div className="text-xs text-center mt-3 text-gray-400">Website designed by Rodela Ghosh</div>
     </footer>
   );
 };
