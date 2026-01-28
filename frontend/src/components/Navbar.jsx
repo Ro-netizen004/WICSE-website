@@ -34,10 +34,10 @@ const DesktopNav = ({ items }) => (
 const DesktopCTA = () => (
   <div className="hidden md:flex">
     <Link
-      to="/about"
+      to="/coffee-with-wicse"
       className="bg-transparent border border-white text-white hover:bg-[#AD88BE] hover:text-black font-semibold py-2 sm:py-3 px-6 sm:px-10 rounded-full transition duration-300 text-sm sm:text-base"
     >
-      Learn more
+      Coffee with WiCSE ☕
     </Link>
   </div>
 );
@@ -62,11 +62,11 @@ const MobileMenu = ({ items, isOpen, closeMenu }) => {
         ))}
         <li>
           <Link
-            to="/about"
+            to="/coffee-with-wicse"
             className="bg-transparent border border-white text-white hover:bg-[#AD88BE] hover:text-black font-semibold py-2 sm:py-3 px-6 sm:px-10 rounded-full transition duration-300 text-sm sm:text-base"
             onClick={closeMenu}
           >
-            Learn more
+            Coffee with WiCSE ☕
           </Link>
         </li>
       </ul>

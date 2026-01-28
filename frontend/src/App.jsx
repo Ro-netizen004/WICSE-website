@@ -6,6 +6,7 @@ import Membership from "./pages/Membership"
 import Events from "./pages/Events"
 import Partnership from "./pages/Partnership"
 import Contact from "./pages/Contact"
+import CoffeeWithWiCSE from "./pages/CoffeeWithWiCSE"
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/events" element={<Events />} />
         <Route path="/partners" element={<Partnership />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path = "/coffee-with-wicse" element = {<CoffeeWithWiCSE />} />
       </Routes>
     </div>
   )
