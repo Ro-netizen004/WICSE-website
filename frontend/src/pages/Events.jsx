@@ -40,8 +40,9 @@ const fetchCalendarEvents = async () => {
   );
 
   if (!res.ok) throw new Error("Failed to fetch");
-
+  
   const data = await res.json();
+  //console.log("Google Calendar raw events:", data.items);
   return (data.items || []).map(formatEvent);
 };
 
