@@ -8,7 +8,7 @@ import MentorForm from "../components/MentorForm";
 
 // Supabase URL & public anon key
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-const supabaseKey = ; // public key
+const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY; // public key
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 export default function CoffeeWithWiCSE() {
