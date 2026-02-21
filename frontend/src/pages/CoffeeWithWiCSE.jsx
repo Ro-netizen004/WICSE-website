@@ -4,7 +4,6 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import CoffeeHero from "../components/CoffeeHero";
 import Topics from "../components/Topics";
-import MentorForm from "../components/MentorForm";
 
 // Supabase URL & public anon key
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
@@ -121,7 +120,7 @@ export default function CoffeeWithWiCSE() {
                         href={`mailto:${mentor.email}`}
                         className="text-[#AD88BE] hover:underline text-sm"
                       >
-                        Contact
+                        Email
                       </a>
                     )}
 
@@ -143,7 +142,6 @@ export default function CoffeeWithWiCSE() {
         </div>
       </section>
 
-      <MentorForm />
       <Topics />
       <Footer />
     </main>
