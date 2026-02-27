@@ -37,7 +37,7 @@ const chunkArray = (arr, size) => {
 const TeamSection = ({ category, members }) => {
   if (!members || members.length === 0) return null;
 
-  const isEventLogistics = category === "Event Logistics";
+  const IsOperations = category === "Operations";
 
   // Separate President, VPs, and rest
   const president = members[0] ? [members[0]] : [];
@@ -56,7 +56,7 @@ const TeamSection = ({ category, members }) => {
       <div className="text-2xl font-thin text-black mb-6">{category}</div>
 
       {/* If Event Logistics, display all members side by side */}
-      {isEventLogistics && (
+      {IsOperations && (
         <div className={getGridClass(members, members.length)}>
           {members.map((person, idx) => (
             <TeamCard
@@ -74,7 +74,7 @@ const TeamSection = ({ category, members }) => {
       )}
 
       {/* President row */}
-      {!isEventLogistics && president.length > 0 && (
+      {!IsOperations && president.length > 0 && (
         <div className={getGridClass(president)}>
           {president.map((person, idx) => (
             <TeamCard
@@ -92,7 +92,7 @@ const TeamSection = ({ category, members }) => {
       )}
 
       {/* VPs row */}
-      {!isEventLogistics && vps.length > 0 && (
+      {!IsOperations && vps.length > 0 && (
         <div className={getGridClass(vps, 2)}>
           {vps.map((person, idx) => (
             <TeamCard
@@ -110,7 +110,7 @@ const TeamSection = ({ category, members }) => {
       )}
 
       {/* Rest of team */}
-      {!isEventLogistics &&
+      {!IsOperations &&
         restChunks.map((chunk, idx) => (
           <div key={idx} className={getGridClass(chunk, 2)}>
             {chunk.map((person, i) => (

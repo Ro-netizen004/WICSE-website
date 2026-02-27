@@ -33,7 +33,7 @@ const CoffeeHero = () => {
               Coffee with WiCSE is an informal, one-time conversation program
               designed to connect women in STEM with industry professionals
               through relaxed, low-pressure coffee chats. Whether you're
-              exploring career paths, seeking mentorship, or simply curious
+              exploring career paths, seeking guidance, or simply curious
               about someone’s journey, these conversations create a welcoming
               space to ask questions, share experiences, and build meaningful
               connections beyond the classroom.

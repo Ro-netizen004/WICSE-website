@@ -52,7 +52,7 @@ export default function CoffeeWithWiCSE() {
           </h2>
 
           <p className="text-gray-500 mb-12 text-lg">
-            Our mentors are passionate students and professionals ready to
+            Our mentors are passionate professionals ready to
             share their experiences and guide you through your STEM journey.
           </p>
 
@@ -115,14 +115,6 @@ export default function CoffeeWithWiCSE() {
 
                   {/* CONTACT */}
                   <div className="flex flex-col gap-1 mt-3">
-                    {mentor.email && (
-                      <a
-                        href={`mailto:${mentor.email}`}
-                        className="text-[#AD88BE] hover:underline text-sm"
-                      >
-                        Email
-                      </a>
-                    )}
 
                     {mentor.linkedin && (
                       <a

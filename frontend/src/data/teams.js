@@ -50,7 +50,7 @@ export const teams = {
     { name: "Jaydah Barnett", role: "Professional Development Director", major: "Biomedical Engineering", image: "/teams/development-director.png", link: "https://www.linkedin.com/in/jaydah-barnett-148949380/" },
   ],
 
-  "Event Logistics": [
+  Operations: [
     { name: "Sarrat Afzal", role: "Treasurer", major: "Computer Science", image: "/teams/treasurer.png", link:"https://www.linkedin.com/in/sarratafzal/" },
     { name: "Dhruvi Vekariya", role: "Secretary", major: "Computer Science", image: "/teams/secretary.png", link:"https://www.linkedin.com/in/dhruvi-vekariya-8856b1353/" }
   ]
