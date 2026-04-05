@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import CoffeeHero from "../components/CoffeeHero";
 import Topics from "../components/Topics";
+import PreviousMentors from "../components/PreviousMentors";
 
 // Supabase URL & public anon key
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
@@ -71,9 +72,9 @@ export default function CoffeeWithWiCSE() {
                   <div className="w-24 h-24 rounded-full bg-gray-200 flex items-center justify-center text-xl font-semibold text-gray-600 mb-4 overflow-hidden">
                     {mentor.photo ? (
                       <img
-                        src={mentor.photo}
+                        src={`${mentor.photo}?width=200&quality=60`}
                         alt={mentor.fullName}
-                        className="w-full h-full object-cover"
+                        loading="lazy"
                       />
                     ) : (
                       mentor.fullName?.charAt(0)
@@ -133,7 +134,7 @@ export default function CoffeeWithWiCSE() {
           </div>
         </div>
       </section>
-
+      <PreviousMentors/>
       <Topics />
       <Footer />
     </main>
