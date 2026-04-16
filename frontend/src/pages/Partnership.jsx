@@ -52,24 +52,26 @@ const Partnership = () => {
           transition={{ delay: 0.3, duration: 0.6 }}
           className="mb-12"
         >
-          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-            {partners.map((partner) => (
-              <motion.a
-                key={partner.name}
-                href={partner.website}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 200 }}
-                className="bg-black p-8 rounded-2xl text-center border border-transparent hover:border-[#AD88BE]/40 transition-all duration-300 cursor-pointer"
-              >
-                <img
-                  src={partner.logo}
-                  alt={partner.name}
-                  className="mx-auto mb-6 w-40 sm:w-48 md:w-56 lg:w-64 h-16 sm:h-20 md:h-24 object-contain"
-                />
-              </motion.a>
-            ))}
+          <div className="flex justify-center">
+            <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 justify-items-center">
+              {partners.map((partner) => (
+                <motion.a
+                  key={partner.name}
+                  href={partner.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ type: "spring", stiffness: 200 }}
+                  className="bg-black p-8 rounded-2xl text-center border border-transparent hover:border-[#AD88BE]/40 transition-all duration-300 cursor-pointer"
+                >
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    className="mx-auto mb-6 w-40 sm:w-48 md:w-56 lg:w-64 h-16 sm:h-20 md:h-24 object-contain"
+                  />
+                </motion.a>
+              ))}
+            </div>
           </div>
         </motion.div>
       </section>
