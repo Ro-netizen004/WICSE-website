@@ -170,11 +170,12 @@ const categories = Object.keys(selectedTeams).filter(
             E-Board Year
           </label>
 
+        <div className="relaive group">
           <select
             id="team-year"
             value={selectedYear}
             onChange={(e) => setSelectedYear(e.target.value)}
-            className="appearance-none bg-black text-white border border-[#AD88BE] rounded-full px-6 py-3 pr-12 min-w-[200px] font-light tracking-wide cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#AD88BE] transition duration-200"
+            className="appearance-none bg-black text-white border border-[#AD88BE] rounded-full px-6 py-3 pr-12 min-w-[200px] font-light tracking-wide cursor-pointer hover:text-black hover:bg-[#AD88BE] hover:border-black hover:focus:ring-black focus:outline-none focus:ring-2 focus:ring-[#AD88BE] transition duration-200"
           >
             <option value="2026-2027">2026–2027</option>
 
@@ -184,9 +185,10 @@ const categories = Object.keys(selectedTeams).filter(
               </option>
             ))}
           </select>
-
-          <div className="pointer-events-none absolute right-4 bottom-3.5 text-[#AD88BE]">
+          
+          <div className="pointer-events-none absolute right-4 bottom-3.5 text-[white] group-hover:text-black">
             ▼
+          </div>
           </div>
         </div>
       </div>
