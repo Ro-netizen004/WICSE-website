@@ -12,8 +12,8 @@ export const teams = {
     {
       name: "Kruthika Rapolu",
       role: "President",
-      major: "Computer Science",
-      image: "/teams/marketing-director2.png",
+      major: "Artificial Intelligence",
+      image: "/teams/president1.png",
       link: "https://www.linkedin.com/in/kruthika-rapolu-aa8280384/"
     },
     {
@@ -35,7 +35,7 @@ export const teams = {
     { name: "Ashly Genao Taveras", role: "Web Developer", major: "Computer Science", image: "/teams/web-developer-2.png", link: "https://www.linkedin.com/in/ashly-genao-taveras/" },
   ],
   Outreach: [
-    { name: "Sneha Lama", role: "Industry Outreach Lead", major: "Cybersecurity", image: "/teams/industry-outreach-lead.png", link: "https://www.linkedin.com/in/snehalama/" },
+    { name: "Sneha Lama", role: "Industry Outreach Lead", major: "Computer Science", image: "/teams/industry-outreach-lead.png", link: "https://www.linkedin.com/in/snehalama/" },
     { name: "Amber-Joy Nicholas", role: "Professional Development Lead", major: "Information Security", image: "/teams/professional-development-lead.png", link: "http://www.linkedin.com/in/amber-joy-nicholas-792218242" },
     { name: "Sumayyah Khan", role: "Community Outreach Lead", major: "Cybersecurity", image: "/teams/community-outreach-lead.png", link: "" },
   ],
