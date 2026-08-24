@@ -1,9 +1,9 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import TeamCard from "../components/TeamCard";
-import { teams } from "../data/teams.js";
+import { teams, pastTeams } from "../data/teams.js";
 
 // Page Header
 const PageHeader = ({ title, subtitle, description }) => (
@@ -137,7 +137,14 @@ const Team = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const categories = Object.keys(teams);
+const [selectedYear, setSelectedYear] = useState("2026-2027");
+
+const selectedTeams =
+  selectedYear === "2026-2027" ? teams : pastTeams[selectedYear];
+
+const categories = Object.keys(selectedTeams).filter(
+  (category) => category !== "Advisor"
+);
 
   return (
     <>
@@ -154,11 +161,48 @@ const Team = () => {
 
       {/* Team Sections */}
       <section className="bg-white text-black px-6 sm:px-12 md:px-24 py-20">
-        {categories.map((category) => (
+      <div className="flex justify-center mb-16">
+        <div className="relative">
+          <label
+            htmlFor="team-year"
+            className="block text-center text-sm text-gray-500 mb-3 font-light tracking-wide"
+          >
+            E-Board Year
+          </label>
+
+        <div className="relaive group">
+          <select
+            id="team-year"
+            value={selectedYear}
+            onChange={(e) => setSelectedYear(e.target.value)}
+            className="appearance-none bg-black text-white border border-[#AD88BE] rounded-full px-6 py-3 pr-12 min-w-[200px] font-light tracking-wide cursor-pointer hover:text-black hover:bg-[#AD88BE] hover:border-black hover:focus:ring-black focus:outline-none focus:ring-2 focus:ring-[#AD88BE] transition duration-200"
+          >
+            <option value="2026-2027">2026–2027</option>
+
+            {Object.keys(pastTeams).map((year) => (
+              <option key={year} value={year}>
+                {year.replace("-", "–")}
+              </option>
+            ))}
+          </select>
+          
+          <div className="pointer-events-none absolute right-4 bottom-3.5 text-[white] group-hover:text-black">
+            ▼
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <TeamSection
+        category="Advisor"
+        members={teams.Advisor}
+      />
+
+      {categories.map((category) => (
           <TeamSection
             key={category}
             category={category}
-            members={teams[category]}
+            members={selectedTeams[category]}
           />
         ))}
       </section>
