@@ -39,22 +39,14 @@ const fetchCalendarEvents = async () => {
   const res = await fetch(
     `https://www.googleapis.com/calendar/v3/calendars/${calendarId}/events?key=${apiKey}&timeMin=${new Date().toISOString()}&singleEvents=true&orderBy=startTime`
   );
-
+  
   if (!res.ok) throw new Error("Failed to fetch");
 
   const data = await res.json();
 
-  const now = new Date();
-  const currentMonth = now.getMonth();
-  const currentYear = now.getFullYear();
-
   return (data.items || [])
     .map(formatEvent)
-    .filter(
-      (event) =>
-        event.startDate.getMonth() === currentMonth &&
-        event.startDate.getFullYear() === currentYear
-    );
+    .slice(0, 3);
 };
 
 /* ---------- UI states ---------- */
@@ -77,7 +69,7 @@ const EmptyState = () => (
       className="w-32 h-32 sm:w-48 sm:h-48 object-contain"
     />
     <p className="text-center text-gray-400 text-lg">
-      No events scheduled for this month — stay tuned!
+      No upcoming events scheduled — stay tuned!
     </p>
   </div>
 );
