@@ -39,7 +39,6 @@ export const teams = {
   ],
   
   Marketing: [
-    { name: "Princess James", role: "Media/Content Lead", major: "Computer Science", image: "/teams/content-lead.png", link:"https://www.linkedin.com/in/princess-as-in-james/" },
     { name: "Zoe Gongora", role: "Design Co-Lead", major: "Chemical Engineering", image: "/teams/design-lead.png", link: "https://www.linkedin.com/in/zoe-gongora-a41949389/" },
     { name: "Patcharalak Tulyakul", role: "Social Media Manager", major: "Computer Science", image: "/teams/social-media-manager.png", link: "https://www.linkedin.com/in/patcharalak-tulyakul/" },
   ],
