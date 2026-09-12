@@ -17,13 +17,6 @@ export const teams = {
       image: "/teams/president1.png",
       link: "https://www.linkedin.com/in/kruthika-rapolu-aa8280384/"
     },
-    {
-      name: "Rodela Ghosh",
-      role: "Vice President",
-      major: "Computer Science",
-      image: "/teams/web-developer.png",
-      link: "https://rodela-dev-site.onrender.com/",
-    },
     { 
       name: "Dhruvi Vekariya", 
       role: "Secretary", 
@@ -40,7 +33,6 @@ export const teams = {
   
   Marketing: [
     { name: "Tuline Katibi", role: "Director of Marketing and Communications", major: "Cybersecurity", image: "/teams/marketing-director.png", link: "http://www.linkedin.com/in/tuline-katibi-230047389" },
-    { name: "Zoe Gongora", role: "Design Co-Lead", major: "Chemical Engineering", image: "/teams/design-lead.png", link: "https://www.linkedin.com/in/zoe-gongora-a41949389/" },
     { name: "Patcharalak Tulyakul", role: "Social Media Manager", major: "Computer Science", image: "/teams/social-media-manager.png", link: "https://www.linkedin.com/in/patcharalak-tulyakul/" },
   ],
 
