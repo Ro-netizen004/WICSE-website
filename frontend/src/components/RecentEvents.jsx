@@ -3,14 +3,15 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const recentEvents = [
-  { src: "/events/Halloween_Social.jpg", alt: "Halloween Social" },
-  { src: "/events/E-Council Student Org Fair 1.jpg", alt: "E-Council Student Org Fair 1" },
-  { src: "/events/E-Council Student Org Fair 2.jpg", alt: "E-Council Student Org Fair 2" },
-  { src: "/events/JPMC.jpg", alt: "JPMC Session" },
-  { src: "/events/JPMC-info-session.JPG", alt: "JPMC Info Session" },
-  { src: "/events/Arthrex-info-session.jpg", alt: "Arthrex Info Session" },
-  { src: "/events/Welcome_Back.jpg", alt: "Welcome Back WiCSE" },
-  { src: "/events/Welcome_Back-2.jpg", alt: "Welcome Back WiCSE" },
+  { src: "/events/WelcomeBack_Social.jpg", alt: "Welcome Back Social" },
+  { src: "/events/Welcome_BackSocialBoard.jpg", alt: "Welcome Back Social Board" },
+  { src: "/events/WelcomeBack_SocialAttendees1.jpg", alt: "Welcome Back Attendees" },
+  { src: "/events/GitHub_Workshop2.jpg", alt: "GitHub Workshop" },
+  { src: "/events/GitHub_Attendees.jpg", alt: "GitHub Workshop Attendees" },
+  { src: "/events/GitHub_Workshop.jpg", alt: "GitHub Workshop" },
+  { src: "/events/YDTD_group.jpg", alt: "You Do The Dishes Social Group Pic" },
+  { src: "/events/YDTD_ceramics.jpg", alt: "You Do The Dishes Social Ceramics" },
+  { src: "/events/YDTD_Wall.jpg", alt: "YDTD Wall"},
 ];
 
 const RecentEvents = () => {
