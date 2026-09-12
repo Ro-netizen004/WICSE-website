@@ -20,13 +20,13 @@ export const partners = [
   },
   { name: "Penske",
     description: "A major American transportation services company.",
-    logo: "/origin.png", // Local image from public folder
+    logo: "/penske.png", // Local image from public folder
     website: "https://www.penske.com/",name: "Penske",
 },
 {
     name: "Citi",
     description: "Primary U.S. consumer and retail banking subsidiary of the global financial services multinational Citigroup.",
-    logo: "/ps-citibank-01.avif", // Local image from public folder
+    logo: "/citilogo.png", // Local image from public folder
     website: "https://www.citi.com/",
 },
 ];
