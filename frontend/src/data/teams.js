@@ -34,6 +34,7 @@ export const teams = {
   Marketing: [
     { name: "Tuline Katibi", role: "Director of Marketing and Communications", major: "Cybersecurity", image: "/teams/marketing-director.png", link: "http://www.linkedin.com/in/tuline-katibi-230047389" },
     { name: "Patcharalak Tulyakul", role: "Social Media Manager", major: "Computer Science", image: "/teams/social-media-manager.png", link: "https://www.linkedin.com/in/patcharalak-tulyakul/" },
+    { name: "Sonya Hayatt", role: "Design Co-Lead", major: "Electrical Engineering", image: "/teams/design_lead.png", link: "" },
   ],
 
   Tech: [
@@ -43,6 +44,7 @@ export const teams = {
   ],
 
   Outreach: [
+    { name: "Prachi Lohana", role: "Director of Outreach", major: "Computer Science", image: "/teams/outreach_director.png", link: "https://www.linkedin.com/in/prachi-lohana6/" },
     { name: "Sneha Lama", role: "Industry Outreach Lead", major: "Computer Science", image: "/teams/industry-outreach-lead.png", link: "https://www.linkedin.com/in/snehalama/" },
     { name: "Amber-Joy Nicholas", role: "Professional Development Lead", major: "Information Security", image: "/teams/professional-development-lead.png", link: "http://www.linkedin.com/in/amber-joy-nicholas-792218242" },
     { name: "Sumayyah Khan", role: "Community Outreach Lead", major: "Cybersecurity", image: "/teams/community-outreach-lead.png", link: "" },
