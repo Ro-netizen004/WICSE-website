@@ -98,7 +98,7 @@ const MobileToggle = ({ toggle }) => (
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const navItems = ["Home", "About", "Team", "Membership", "Events", "Partners", "Contact"];
+  const navItems = ["Home", "About", "Team", "Milestones", "Membership", "Events", "Partners", "Contact"];
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
