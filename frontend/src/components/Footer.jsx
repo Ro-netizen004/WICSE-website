@@ -18,15 +18,6 @@ const Footer = () => {
           </div>
         </Link>
 
-        {/* Links */}
-        <ul className="flex flex-wrap gap-6 text-sm font-medium justify-center md:justify-start">
-          {["Home", "About", "Team", "Events", "Contact"].map((link, index) => (
-            <li key={index} className="hover:text-[#AD88BE] cursor-pointer">
-              <Link to={`/${link.toLowerCase()}`}>{link}</Link>
-            </li>
-          ))}
-        </ul>
-
         {/* Socials */}
         <Socials />
 
