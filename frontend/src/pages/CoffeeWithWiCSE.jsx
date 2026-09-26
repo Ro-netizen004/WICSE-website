@@ -10,7 +10,6 @@ export default function CoffeeWithWiCSE() {
       <section className="flex-1 bg-black text-white py-24 sm:py-32 px-6">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-16">
 
-          {/* Coffee Image */}
           <motion.img
             src="/coffee-with-wicse.png"
             alt="Coffee with WiCSE"
@@ -24,7 +23,6 @@ export default function CoffeeWithWiCSE() {
             }}
           />
 
-          {/* Text Content */}
           <div className="max-w-2xl text-center">
 
             <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-8xl font-thin text-[#AD88BE] mb-6 leading-tight">
@@ -45,7 +43,6 @@ export default function CoffeeWithWiCSE() {
               connections beyond the classroom.
             </p>
 
-            {/* Coming Soon */}
             <div className="inline-flex items-center justify-center rounded-full border border-[#AD88BE] text-[#AD88BE] font-semibold px-10 py-4 text-base">
               Coming Soon
             </div>
