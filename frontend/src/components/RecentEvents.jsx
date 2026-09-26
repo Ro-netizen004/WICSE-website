@@ -12,6 +12,8 @@ const recentEvents = [
   { src: "/events/YDTD_group.jpg", alt: "You Do The Dishes Social Group Pic" },
   { src: "/events/YDTD_ceramics.jpg", alt: "You Do The Dishes Social Ceramics" },
   { src: "/events/YDTD_Wall.jpg", alt: "YDTD Wall"},
+  { src: "/events/JPMC_event.jpg", alt: "JP Morgan Chase Event"},
+  { src: "/events/JPMC_event2.jpg", alt: "JP Morgan Chase Event"},
 ];
 
 const RecentEvents = () => {
