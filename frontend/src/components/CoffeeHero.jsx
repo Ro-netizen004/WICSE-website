@@ -1,0 +1,47 @@
+import { motion } from "framer-motion";
+const CoffeeHero = ({ bookingLink }) => {
+  return (
+
+      <section className="bg-black text-white py-24 sm:py-32 px-6">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-16">
+
+          {/* PHOTO */}
+          <motion.img
+            src="/coffee-with-wicse.png"
+            alt="Coffee with WiCSE"
+            className="w-64 sm:w-72 md:w-80 lg:w-96 xl:w-[28rem] flex-shrink-0"
+            animate={{ y: [0, -12, 0] }}
+            transition={{
+              duration: 3,
+              ease: "easeInOut",
+              repeat: Infinity,
+              repeatType: "loop",
+            }}
+          />
+
+          <div className="max-w-2xl text-center lg:text-left">
+            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-8xl font-thin text-[#AD88BE] mb-6 leading-tight">
+              Coffee with WiCSE
+            </h1>
+
+            <p className="text-gray-100 text-xl sm:text-2xl md:text-3xl font-light mb-6">
+              Meaningful conversations. Real stories. Inspiring women in tech.
+            </p>
+
+            <p className="text-gray-400 text-sm sm:text-base mb-8">
+               Coffee with WiCSE is an informal, one-time conversation program
+              designed to connect women in STEM with industry professionals
+              through relaxed, low-pressure coffee chats. Whether you're
+              exploring career paths, seeking guidance, or simply curious
+              about someone’s journey, these conversations create a welcoming
+              space to ask questions, share experiences, and build meaningful
+              connections beyond the classroom.
+            </p>
+          </div>
+        </div>
+      </section>
+
+  )
+}
+
+export default CoffeeHero
