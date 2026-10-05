@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-const CoffeeHero = ({ bookingLink }) => {
+const CoffeeHero = () => {
   return (
 
       <section className="bg-black text-white py-24 sm:py-32 px-6">
