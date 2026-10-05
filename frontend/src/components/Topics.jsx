@@ -1,4 +1,5 @@
 import { topics } from "../data/topics"
+import { BOOKING_LINK } from "../pages/CoffeeWithWiCSE"; 
 const Topics = () => {
   return (
       <section className="py-24 sm:py-32 px-4 sm:px-6 bg-white">
@@ -24,7 +25,7 @@ const Topics = () => {
           </div>
 
           <a
-            href="https://outlook.office.com/book/CoffeeWithWiCSE@bookings.usf.edu/?ismsaljsauthenabled"
+            href={BOOKING_LINK}
             className="inline-block mt-12 rounded-full bg-[#AD88BE] hover:bg-[#B58CCC] text-white font-semibold px-10 py-4 text-base transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
           >
             Schedule Your Coffee Chat

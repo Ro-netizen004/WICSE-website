@@ -7,7 +7,7 @@ import PreviousMentors from "../components/PreviousMentors";
 import MentorCard from "../components/MentorCard";
 import { mentorsData } from "../data/mentors";
 
-const BOOKING_LINK =
+export const BOOKING_LINK =
   "https://bookings.cloud.microsoft/owa/calendar/CoffeewithWiCSE1@bookings.usf.edu/bookings/?ismsaljsauthenabled";
 
 export default function CoffeeWithWiCSE() {
