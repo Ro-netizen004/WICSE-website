@@ -185,7 +185,7 @@ export const mentorsData = [
     photo: "/mentors/ramonicapatton.jpeg",
     schoolYear: "",
     role: "Project Scheduler",
-    major: "IT Project Management ",
+    major: "IT Project Management",
     availability: "Thursday (2pm-5pm) & Friday (2pm-5pm) (Schedule is subject to change)",
     bio: "Ramonica Patton is a Project Scheduler and PMP certified project management professional with an MBA in Information Technology Project Management from Florida Institute of Technology. Her career path reflects a strong commitment to growth, advancing from administrative and operations support into project scheduling and capital project management within the energy industry. In her current role, Ramonica supports engineering, IT, and transmission projects by developing and maintaining schedules, tracking milestones and budgets, coordinating with project teams, and helping ensure projects remain aligned with organizational goals. She has developed a particular interest in project management, process improvement, technology, data analytics. Ramonica is motivated by continuous improvement and creating systems that make work more organized, efficient, and measurable. Her long-term goal is to advance into project management leadership, where she can combine her technical knowledge, business education, and practical experience to lead complex projects and develop high-performing teams.",
     topics: [
