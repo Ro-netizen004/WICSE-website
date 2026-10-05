@@ -3,17 +3,16 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const recentEvents = [
-  { src: "/events/WelcomeBack_Social.jpg", alt: "Welcome Back Social" },
   { src: "/events/Welcome_BackSocialBoard.jpg", alt: "Welcome Back Social Board" },
   { src: "/events/WelcomeBack_SocialAttendees1.jpg", alt: "Welcome Back Attendees" },
   { src: "/events/GitHub_Workshop2.jpg", alt: "GitHub Workshop" },
   { src: "/events/GitHub_Attendees.jpg", alt: "GitHub Workshop Attendees" },
-  { src: "/events/GitHub_Workshop.jpg", alt: "GitHub Workshop" },
   { src: "/events/YDTD_group.jpg", alt: "You Do The Dishes Social Group Pic" },
   { src: "/events/YDTD_ceramics.jpg", alt: "You Do The Dishes Social Ceramics" },
-  { src: "/events/YDTD_Wall.jpg", alt: "YDTD Wall"},
   { src: "/events/JPMC_event.jpg", alt: "JP Morgan Chase Event"},
-  { src: "/events/JPMC_event2.jpg", alt: "JP Morgan Chase Event"},
+  { src: "/events/Arthrex.jpg", alt: "Arthrex Info Session"},
+  { src: "/events/Arthrex2.jpg", alt: "Arthrex Info Session"},
+  { src: "/events/PitchPerfect.jpg", alt: "Pitch Perfect and Career Ready"},
 ];
 
 const RecentEvents = () => {
