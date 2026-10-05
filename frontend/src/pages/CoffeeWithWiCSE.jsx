@@ -8,7 +8,7 @@ import MentorCard from "../components/MentorCard";
 import { mentorsData } from "../data/mentors";
 
 const BOOKING_LINK =
-  "https://bookings.cloud.microsoft/book/CoffeewithWiCSE1@bookings.usf.edu/?ismsaljsauthenabled";
+  "https://bookings.cloud.microsoft/owa/calendar/CoffeewithWiCSE1@bookings.usf.edu/bookings/?ismsaljsauthenabled";
 
 export default function CoffeeWithWiCSE() {
   const [mentors, setMentors] = useState([]);
