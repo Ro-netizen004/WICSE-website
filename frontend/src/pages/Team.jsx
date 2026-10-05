@@ -170,7 +170,7 @@ const categories = Object.keys(selectedTeams).filter(
             E-Board Year
           </label>
 
-        <div className="relaive group">
+        <div className="relative group">
           <select
             id="team-year"
             value={selectedYear}
