@@ -43,7 +43,12 @@ const fetchCalendarEvents = async () => {
   
   const data = await res.json();
   //console.log("Google Calendar raw events:", data.items);
-
+   console.log(
+   data.items.map((event) => ({
+    id: event.id,
+    title: event.summary,
+  }))
+);
 
   return (data.items || []).map(formatEvent);
 };
