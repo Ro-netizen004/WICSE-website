@@ -214,4 +214,21 @@ export const mentorsData = [
     ],
     linkedin: "http://www.linkedin.com/in/jing-wang-7444631a",
   },
+  {
+    id: 13,
+    fullName: "Molina Hoy",
+    photo: "/mentors/molinahoy.jpeg",
+    schoolYear: "",
+    role: "Software Engineer",
+    major: "Computer Science",
+    availability: "Any day after 5:30 PM, no holidays",
+    bio: "USF Alumni (May 2024 Graduate), Software Engineer at JPMorgan Chase for over 2 years + Internship, love traveling and huge foodie, being the best version of myself",
+    topics: [
+      "Resume & CV Review", 
+      "Interview Preparation", 
+      "Early Career Advice", 
+      "Industry vs Academia"
+    ],
+    linkedin: "https://www.linkedin.com/in/molinahoy",
+  },
 ];
